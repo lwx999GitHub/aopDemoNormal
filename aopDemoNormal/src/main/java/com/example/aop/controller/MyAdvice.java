@@ -34,6 +34,10 @@ public Object mylogger(ProceedingJoinPoint pjp) throws Throwable {
     logger.info("调用后:"+className+";"+methodName+"返回值为："+mapper.writeValueAsString(obj));
     return obj;
 }
+@Before("myPointA()")
+    public void methodBefore(){
+            System.out.println("======methodBefore======");
+    }
 
 
 }
