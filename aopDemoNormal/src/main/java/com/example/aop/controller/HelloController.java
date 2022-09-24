@@ -9,6 +9,8 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(@RequestParam("name") String name){
+        //System.out.println("hello "+name);
+        int s=1/0;
         return "hello "+name;
     }
 
